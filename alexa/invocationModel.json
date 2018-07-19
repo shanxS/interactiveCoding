@@ -1,0 +1,208 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "coder",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "stop",
+                        "end"
+                    ]
+                },
+                {
+                    "name": "setProjectIntent",
+                    "slots": [
+                        {
+                            "name": "projectNameSlot",
+                            "type": "projectNameSlotType"
+                        }
+                    ],
+                    "samples": [
+                        "{projectNameSlot}",
+                        "project {projectNameSlot}",
+                        "set project {projectNameSlot}",
+                        "set project to {projectNameSlot}"
+                    ]
+                },
+                {
+                    "name": "EmptyIntent",
+                    "slots": [
+                        {
+                            "name": "emptySlot",
+                            "type": "emptySlotType"
+                        }
+                    ],
+                    "samples": [
+                        "{emptySlot} {emptySlot} {emptySlot}",
+                        "{emptySlot} {emptySlot}",
+                        "{emptySlot}"
+                    ]
+                },
+                {
+                    "name": "changeDirectoryIntent",
+                    "slots": [
+                        {
+                            "name": "dirNameSlot",
+                            "type": "dirNameSlotType"
+                        },
+                        {
+                            "name": "relativeDirNameSlot",
+                            "type": "relativeChangeSlotType"
+                        }
+                    ],
+                    "samples": [
+                        "change directory {relativeDirNameSlot}",
+                        "set directory {relativeDirNameSlot}",
+                        "dir {relativeDirNameSlot}",
+                        "dir {dirNameSlot}",
+                        "set directory {dirNameSlot}",
+                        "change directory {dirNameSlot}",
+                        "cd {dirNameSlot}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "projectNameSlotType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "cpython"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Turtleworker"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "emptySlotType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "stash"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "status"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "commit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "diff"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ls"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "find"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "git"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "relativeChangeSlotType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "up six"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "six up"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "up one"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "three up"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "two up"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "one up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "dirNameSlotType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "dot slash src slash java slash com slash amazon",
+                                "synonyms": [
+                                    "./src/java/com/amazon"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dot slash src",
+                                "synonyms": [
+                                    "./src"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "slash proc",
+                                "synonyms": [
+                                    "/proc"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "slash dev",
+                                "synonyms": [
+                                    "/dev"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
